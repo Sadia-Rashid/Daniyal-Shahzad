@@ -296,3 +296,52 @@ h2 { font-size: clamp(2.7rem, 5.2vw, 4.6rem); line-height: .99; letter-spacing: 
 .why-grid .why-card:first-child h3 {
   color: #FFB7C5;
 }
+
+/* WHY CHOOSE ME — FIX CARD LAYOUT */
+.why-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* First point spans the full row */
+.why-grid > .why-card:first-child {
+  grid-column: 1 / -1;
+}
+
+/* Remove highlight from all cards */
+.why-grid > .why-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 183, 197, 0.18) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Highlight ONLY the first point */
+.why-grid > .why-card:first-child {
+  background: rgba(255, 183, 197, 0.12) !important;
+  border: 1px solid #FFB7C5 !important;
+  box-shadow: 0 0 24px rgba(255, 183, 197, 0.12) !important;
+}
+
+/* First point heading */
+.why-grid > .why-card:first-child h3 {
+  color: #FFB7C5 !important;
+}
+
+/* Restore normal heading colors on other cards */
+.why-grid > .why-card:not(:first-child) h3 {
+  color: #FFFFFF !important;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  .why-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .why-grid > .why-card:first-child {
+    grid-column: auto;
+  }
+}
