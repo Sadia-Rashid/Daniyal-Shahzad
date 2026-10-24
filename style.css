@@ -408,3 +408,25 @@ h2 { font-size: clamp(2.7rem, 5.2vw, 4.6rem); line-height: .99; letter-spacing: 
   }
 }
 
+
+/* Lighten purple only — keep the existing design */
+:root {
+  --purple: #6B2D78;
+  --purple-soft: #8A4D96;
+  --ink: #2E003E;
+}
+
+body,
+html {
+  background-color: #6B2D78;
+}
+
+.site-header,
+.site-footer,
+.why-card,
+.experience-card,
+.education-card,
+.button-primary,
+.button {
+  background-color: #6B2D78;
+}
