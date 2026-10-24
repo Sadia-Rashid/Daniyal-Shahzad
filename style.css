@@ -408,13 +408,18 @@ h2 { font-size: clamp(2.7rem, 5.2vw, 4.6rem); line-height: .99; letter-spacing: 
   }
 }
 
-/* Swap pink and purple across the existing design */
+
+/* Refined purple and pink colour theme */
+
+/* Keep the original colour palette */
 :root {
   --purple: #2E003E;
   --pink: #FFB7C5;
+  --white: #FFFFFF;
 }
 
-/* Replace pink backgrounds with purple */
+/* Keep the main sections deep purple */
+body,
 .hero,
 #about,
 #why-choose-me,
@@ -422,65 +427,88 @@ h2 { font-size: clamp(2.7rem, 5.2vw, 4.6rem); line-height: .99; letter-spacing: 
 #skills,
 #education,
 #contact {
-  background-color: #2E003E !important;
+  background-color: #2E003E;
+  color: #FFFFFF;
 }
 
-/* Replace purple backgrounds with pink */
+/* Use pink for the header and footer */
 .site-header,
-.site-footer,
-.why-card,
-.experience-card,
-.education-card,
-.button-primary,
-.button {
-  background-color: #FFB7C5 !important;
+.site-footer {
+  background-color: #FFB7C5;
 }
 
-/* White text on purple backgrounds */
-.hero h1,
-.hero h1 span,
-.hero-role,
-.hero-pretitle,
-.hero-description,
-#about h2,
-#about h3,
-#about p,
-#why-choose-me h2,
-#why-choose-me h3,
-#why-choose-me p,
-#experience h2,
-#experience h3,
-#experience p,
-#skills h2,
-#skills h3,
-#skills p,
-#education h2,
-#education h3,
-#education p,
-#contact h2,
-#contact h3,
-#contact p {
-  color: #FFFFFF !important;
-}
-
-/* Purple text on pink cards and buttons */
-.why-card *,
-.experience-card *,
-.education-card *,
-.button-primary,
-.button {
+/* Keep header and footer text readable */
+.site-header *,
+.site-footer * {
   color: #2E003E !important;
 }
 
-/* Keep navigation readable */
-.site-header *,
-.site-footer * {
-  color: #FFFFFF !important;
+/* Keep cards dark, with subtle pink borders */
+.why-card,
+.experience-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: #FFFFFF;
+  border-color: rgba(255, 183, 197, 0.35);
+}
+
+/* Highlight the Global Talent card */
+#why-choose-me .why-card-cost {
+  background-color: #FFB7C5 !important;
+  color: #2E003E !important;
+  border-color: #FFB7C5 !important;
+}
+
+#why-choose-me .why-card-cost * {
+  color: #2E003E !important;
+}
+
+/* Pink primary buttons with readable text */
+.button-primary {
+  background-color: #FFB7C5;
+  color: #2E003E;
+}
+
+/* Keep other buttons and links readable */
+.button:not(.button-primary) {
+  color: #FFFFFF;
 }
 
 /* Pink accents */
 .section-label,
+.eyebrow,
 .hero-star,
-.hero-monogram span {
-  color: #FFB7C5 !important;
+.hero-monogram span,
+.skill-number,
+.skill-arrow,
+.external-link {
+  color: #FFB7C5;
 }
+
+/* Remove floating blocks around the DS monogram */
+.floating-note {
+  display: none !important;
+}
+
+/* Make Global Talent first and full-width */
+#why-choose-me .why-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 20px;
+}
+
+#why-choose-me .why-card-cost {
+  grid-column: 1 / -1 !important;
+  order: -1 !important;
+}
+
+/* Stack cards on small screens */
+@media (max-width: 700px) {
+  #why-choose-me .why-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #why-choose-me .why-card-cost {
+    grid-column: 1 !important;
+  }
+}
+
