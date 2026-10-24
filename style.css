@@ -345,3 +345,65 @@ h2 { font-size: clamp(2.7rem, 5.2vw, 4.6rem); line-height: .99; letter-spacing: 
     grid-column: auto;
   }
 }
+
+/* ===== WHY CHOOSE ME: FINAL LAYOUT FIX ===== */
+
+#why-choose-me .why-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  align-items: stretch !important;
+}
+
+/* FIRST POINT: full width and highlighted */
+#why-choose-me .why-grid > .why-card-cost {
+  grid-column: 1 / -1 !important;
+  order: -1 !important;
+  background: #FFB7C5 !important;
+  color: #2E003E !important;
+  border: 1px solid #FFB7C5 !important;
+  box-shadow: 0 0 24px rgba(255, 183, 197, 0.18) !important;
+}
+
+#why-choose-me .why-card-cost h3,
+#why-choose-me .why-card-cost .why-tag,
+#why-choose-me .why-card-cost .why-number,
+#why-choose-me .why-card-cost p,
+#why-choose-me .why-card-cost .why-card-bottom {
+  color: #2E003E !important;
+}
+
+#why-choose-me .why-card-cost .why-card-bottom {
+  border-color: rgba(46, 0, 62, 0.25) !important;
+}
+
+/* OTHER FOUR POINTS: normal, unhighlighted cards */
+#why-choose-me .why-grid > .why-card:not(.why-card-cost) {
+  grid-column: auto !important;
+  order: 0 !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 183, 197, 0.18) !important;
+  box-shadow: none !important;
+  transform: none;
+}
+
+#why-choose-me .why-grid > .why-card:not(.why-card-cost) h3 {
+  color: #FFFFFF !important;
+}
+
+#why-choose-me .why-grid > .why-card:not(.why-card-cost) p {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* MOBILE: stack cards vertically */
+@media (max-width: 700px) {
+  #why-choose-me .why-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #why-choose-me .why-grid > .why-card-cost,
+  #why-choose-me .why-grid > .why-card:not(.why-card-cost) {
+    grid-column: 1 !important;
+  }
+}
