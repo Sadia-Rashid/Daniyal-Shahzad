@@ -231,3 +231,50 @@ h2 { font-size: clamp(2.7rem, 5.2vw, 4.6rem); line-height: .99; letter-spacing: 
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+/* Remove the two floating blocks around the DS monogram */
+.hero-visual .floating-card,
+.hero-visual .orbit-card,
+.hero-visual .hero-float-card {
+  display: none !important;
+}
+/* Hide both floating blocks around DS */
+.floating-note {
+  display: none !important;
+}
+
+/* Put Global Talent first and make it full-width */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.why-card-cost {
+  order: -1;
+  grid-column: 1 / -1;
+}
+
+/* Keep all remaining cards aligned consistently */
+.why-card:not(.why-card-cost) {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.why-card:not(.why-card-cost) .why-card-bottom {
+  margin-top: auto;
+}
+
+/* Mobile alignment */
+@media (max-width: 700px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-card-cost {
+    grid-column: 1;
+  }
+}
