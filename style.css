@@ -408,19 +408,24 @@ h2 { font-size: clamp(2.7rem, 5.2vw, 4.6rem); line-height: .99; letter-spacing: 
   }
 }
 
-
-/* Lighten purple only — keep the existing design */
+/* Swap pink and purple across the existing design */
 :root {
-  --purple: #6B2D78;
-  --purple-soft: #8A4D96;
-  --ink: #2E003E;
+  --purple: #2E003E;
+  --pink: #FFB7C5;
 }
 
-body,
-html {
-  background-color: #6B2D78;
+/* Replace pink backgrounds with purple */
+.hero,
+#about,
+#why-choose-me,
+#experience,
+#skills,
+#education,
+#contact {
+  background-color: #2E003E !important;
 }
 
+/* Replace purple backgrounds with pink */
 .site-header,
 .site-footer,
 .why-card,
@@ -428,5 +433,54 @@ html {
 .education-card,
 .button-primary,
 .button {
-  background-color: #6B2D78;
+  background-color: #FFB7C5 !important;
+}
+
+/* White text on purple backgrounds */
+.hero h1,
+.hero h1 span,
+.hero-role,
+.hero-pretitle,
+.hero-description,
+#about h2,
+#about h3,
+#about p,
+#why-choose-me h2,
+#why-choose-me h3,
+#why-choose-me p,
+#experience h2,
+#experience h3,
+#experience p,
+#skills h2,
+#skills h3,
+#skills p,
+#education h2,
+#education h3,
+#education p,
+#contact h2,
+#contact h3,
+#contact p {
+  color: #FFFFFF !important;
+}
+
+/* Purple text on pink cards and buttons */
+.why-card *,
+.experience-card *,
+.education-card *,
+.button-primary,
+.button {
+  color: #2E003E !important;
+}
+
+/* Keep navigation readable */
+.site-header *,
+.site-footer * {
+  color: #FFFFFF !important;
+}
+
+/* Pink accents */
+.section-label,
+.hero-star,
+.hero-monogram span {
+  color: #FFB7C5 !important;
 }
