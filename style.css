@@ -407,3 +407,246 @@ h2 { font-size: clamp(2.7rem, 5.2vw, 4.6rem); line-height: .99; letter-spacing: 
     grid-column: 1 !important;
   }
 }
+
+/* ===== NEW COLOUR BALANCE: 30% PURPLE, 30% WHITE, 40% PINK ===== */
+:root {
+  --purple: #2E003E;
+  --pink: #FFB7C5;
+  --white: #FFFFFF;
+  --purple-soft: #2E003E;
+  --ink: #2E003E;
+  --line: rgba(46, 0, 62, 0.18);
+  --muted: rgba(46, 0, 62, 0.78);
+}
+
+/* Main page: white instead of full purple */
+html,
+body {
+  background: #FFFFFF !important;
+  color: #2E003E !important;
+}
+
+/* Keep the navigation deep purple */
+.site-header,
+.nav {
+  background: #2E003E !important;
+  color: #FFFFFF !important;
+}
+
+.site-header {
+  border-bottom-color: rgba(255, 183, 197, 0.4) !important;
+}
+
+.nav a,
+.menu-btn {
+  color: #FFFFFF !important;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #FFB7C5 !important;
+}
+
+/* Hero: pink background with purple text */
+.hero {
+  background: #FFB7C5 !important;
+  color: #2E003E !important;
+}
+
+.hero-pretitle,
+.hero-description,
+.text-link,
+.scroll-cue {
+  color: #2E003E !important;
+}
+
+.hero h1,
+.hero-role {
+  color: #2E003E !important;
+}
+
+.hero h1 span,
+h2 span,
+.hero-monogram span {
+  color: #2E003E !important;
+}
+
+.hero-monogram {
+  color: #FFFFFF !important;
+  text-shadow: none !important;
+}
+
+.hero-art::before {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.65),
+    rgba(255, 255, 255, 0.12) 68%,
+    transparent 70%
+  ) !important;
+}
+
+.orbit {
+  border-color: rgba(46, 0, 62, 0.35) !important;
+}
+
+.hero-star {
+  color: #2E003E !important;
+}
+
+.button-primary {
+  background: #2E003E !important;
+  color: #FFFFFF !important;
+}
+
+/* White content sections */
+#about,
+#skills,
+#experience,
+#education,
+#contact,
+#why-choose-me {
+  color: #2E003E !important;
+  border-top-color: rgba(46, 0, 62, 0.18) !important;
+}
+
+#about,
+#skills,
+#education {
+  background: #FFFFFF !important;
+}
+
+/* Pink sections to balance the overall palette */
+#why-choose-me,
+#experience,
+#contact {
+  background: #FFB7C5 !important;
+}
+
+/* Make headings and paragraph text readable on light backgrounds */
+#about h2,
+#about h3,
+#skills h2,
+#skills h3,
+#experience h2,
+#experience h3,
+#education h2,
+#contact h2,
+#why-choose-me h2,
+#why-choose-me h3 {
+  color: #2E003E !important;
+}
+
+#about p,
+#skills p,
+#experience p,
+#education p,
+#contact p,
+#why-choose-me p,
+.section-intro,
+.about-copy,
+.why-intro,
+.company,
+.experience-details,
+.skill-item p,
+.education-school,
+.contact-copy > p:not(.contact-question) {
+  color: rgba(46, 0, 62, 0.82) !important;
+}
+
+/* Cards: white surfaces with purple text */
+.why-card,
+.experience-card,
+.operations-band {
+  background: #FFFFFF !important;
+  color: #2E003E !important;
+  border-color: rgba(46, 0, 62, 0.2) !important;
+  box-shadow: none !important;
+}
+
+.why-card h3,
+.experience-card h3,
+.operations-band h3,
+.workflow-grid h4 {
+  color: #2E003E !important;
+}
+
+.why-card p,
+.experience-card p,
+.operations-band p,
+.workflow-grid p {
+  color: rgba(46, 0, 62, 0.82) !important;
+}
+
+/* Highlight the first Why Choose Me card in deep purple */
+#why-choose-me .why-grid > .why-card-cost {
+  background: #2E003E !important;
+  color: #FFFFFF !important;
+  border-color: #2E003E !important;
+}
+
+#why-choose-me .why-card-cost h3,
+#why-choose-me .why-card-cost p,
+#why-choose-me .why-card-cost .why-tag,
+#why-choose-me .why-card-cost .why-number,
+#why-choose-me .why-card-cost .why-card-bottom {
+  color: #FFFFFF !important;
+}
+
+/* Pink accents and dividers */
+.section-label,
+.why-tag,
+.skill-number,
+.skill-tools,
+.skill-arrow,
+.experience-meta,
+.external-link,
+.contact-details a > span,
+.contact-details b {
+  color: #2E003E !important;
+}
+
+.keyword-row span,
+.tag-row span {
+  color: #2E003E !important;
+  border-color: rgba(46, 0, 62, 0.25) !important;
+}
+
+.skills-list,
+.skill-item,
+.contact-details,
+.contact-details a,
+.workflow-grid > div,
+.workflow-footer {
+  border-color: rgba(46, 0, 62, 0.2) !important;
+}
+
+.project-preview,
+.education-card {
+  background: #FFB7C5 !important;
+  color: #2E003E !important;
+  border-color: rgba(46, 0, 62, 0.2) !important;
+}
+
+.project-preview *,
+.education-card * {
+  color: #2E003E !important;
+}
+
+/* Keep the footer deep purple */
+.site-footer {
+  background: #2E003E !important;
+  color: #FFFFFF !important;
+  border-top-color: rgba(255, 183, 197, 0.35) !important;
+}
+
+.site-footer .footer-name,
+.site-footer a {
+  color: #FFB7C5 !important;
+}
+
+/* Mobile menu remains deep purple */
+@media (max-width: 760px) {
+  .nav {
+    background: #2E003E !important;
+  }
+}
