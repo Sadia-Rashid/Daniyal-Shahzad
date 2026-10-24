@@ -650,3 +650,375 @@ h2 span,
     background: #2E003E !important;
   }
 }
+
+/* ==========================================
+   DANIYAL PORTFOLIO — PINK & PURPLE THEME
+   Pink:   #FFB7C5
+   Purple: #2E003E
+   White:  #FFFFFF
+   ========================================== */
+
+:root {
+  --purple: #2E003E;
+  --pink: #FFB7C5;
+  --white: #FFFFFF;
+  --purple-soft: #2E003E;
+  --pink-soft: #FFB7C5;
+  --line: rgba(46, 0, 62, 0.2);
+  --muted: rgba(46, 0, 62, 0.78);
+  --ink: #2E003E;
+}
+
+/* Main pink background */
+html,
+body {
+  background: #FFB7C5 !important;
+  color: #2E003E !important;
+}
+
+/* Purple navigation */
+.site-header,
+.nav {
+  background: #2E003E !important;
+  color: #FFFFFF !important;
+}
+
+.site-header {
+  border-bottom: 1px solid rgba(255, 183, 197, 0.35) !important;
+}
+
+.brand,
+.brand-dot,
+.nav a,
+.menu-btn {
+  color: #FFFFFF !important;
+}
+
+.brand-initials,
+.nav a:hover,
+.nav a.active {
+  color: #FFB7C5 !important;
+}
+
+/* Hero section */
+.hero {
+  background: #FFB7C5 !important;
+  color: #2E003E !important;
+}
+
+.hero .eyebrow,
+.hero .status-dot {
+  color: #2E003E !important;
+}
+
+.hero h1,
+.hero h1 span,
+.hero-role,
+.hero-pretitle,
+.hero-description,
+.text-link,
+.scroll-cue {
+  color: #2E003E !important;
+}
+
+.hero-monogram {
+  color: #FFFFFF !important;
+  text-shadow: 0 10px 35px rgba(46, 0, 62, 0.35) !important;
+}
+
+.hero-monogram span {
+  color: #FFB7C5 !important;
+}
+
+.hero-art::before {
+  background: radial-gradient(
+    circle,
+    rgba(46, 0, 62, 0.18),
+    transparent 70%
+  ) !important;
+}
+
+.orbit {
+  border-color: rgba(46, 0, 62, 0.45) !important;
+}
+
+.hero-star {
+  color: #2E003E !important;
+}
+
+/* Remove the two floating blocks around DS */
+.floating-note {
+  display: none !important;
+}
+
+/* Purple buttons */
+.button-primary,
+.button,
+.contact-link {
+  background: #2E003E !important;
+  color: #FFFFFF !important;
+  border: 1px solid #2E003E !important;
+  border-radius: 999px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.button-primary:hover,
+.button:hover,
+.contact-link:hover {
+  background: #2E003E !important;
+  color: #FFB7C5 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(46, 0, 62, 0.25) !important;
+}
+
+.text-link span {
+  color: #2E003E !important;
+}
+
+/* Pink backgrounds for all main sections */
+#about,
+#why-choose-me,
+#experience,
+#skills,
+#education,
+#contact {
+  background: #FFB7C5 !important;
+  color: #2E003E !important;
+  border-color: rgba(46, 0, 62, 0.18) !important;
+}
+
+/* Text on pink backgrounds */
+.section-label,
+h2,
+h3,
+h4,
+.section-intro,
+.about-copy,
+.about-copy p,
+.why-intro,
+.experience-meta,
+.company,
+.experience-details,
+.skill-item p,
+.education-school,
+.contact-copy,
+.contact-copy p,
+.contact-question {
+  color: #2E003E !important;
+}
+
+/* Section labels */
+.section-label,
+.why-tag,
+.skill-number,
+.skill-tools,
+.skill-arrow,
+.experience-meta,
+.external-link {
+  color: #2E003E !important;
+}
+
+/* Why Choose Me — purple cards */
+.why-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  align-items: stretch !important;
+}
+
+.why-grid > .why-card {
+  grid-column: auto !important;
+  order: 0 !important;
+  background: #2E003E !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(46, 0, 62, 0.6) !important;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(46, 0, 62, 0.12) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.why-grid > .why-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 14px 28px rgba(46, 0, 62, 0.24) !important;
+}
+
+.why-grid > .why-card h3,
+.why-grid > .why-card p,
+.why-grid > .why-card .why-tag,
+.why-grid > .why-card .why-number,
+.why-grid > .why-card .why-card-bottom {
+  color: #FFFFFF !important;
+}
+
+.why-grid > .why-card .why-card-bottom {
+  border-color: rgba(255, 183, 197, 0.3) !important;
+}
+
+/* First point highlighted in pink */
+#why-choose-me .why-grid > .why-card-cost {
+  grid-column: 1 / -1 !important;
+  order: -1 !important;
+  background: #2E003E !important;
+  border: 2px solid #2E003E !important;
+}
+
+#why-choose-me .why-grid > .why-card-cost h3,
+#why-choose-me .why-grid > .why-card-cost p,
+#why-choose-me .why-grid > .why-card-cost .why-tag,
+#why-choose-me .why-grid > .why-card-cost .why-number,
+#why-choose-me .why-grid > .why-card-cost .why-card-bottom {
+  color: #FFFFFF !important;
+}
+
+/* Experience cards */
+.experience-card,
+.operations-band {
+  background: #2E003E !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(46, 0, 62, 0.25) !important;
+  border-radius: 12px;
+}
+
+.experience-card h3,
+.experience-card p,
+.experience-card .company,
+.experience-card .experience-details,
+.experience-card .experience-meta,
+.experience-card .external-link,
+.operations-band h3,
+.operations-band h4,
+.operations-band p,
+.workflow-grid b,
+.workflow-grid span {
+  color: #FFFFFF !important;
+}
+
+.experience-card .project-preview {
+  background: #FFB7C5 !important;
+  color: #2E003E !important;
+  border-radius: 8px;
+}
+
+.experience-card .project-preview * {
+  color: #2E003E !important;
+}
+
+/* Skills: pink section, purple rows */
+.skills-list {
+  border-color: rgba(46, 0, 62, 0.25) !important;
+}
+
+.skill-item {
+  border-color: rgba(46, 0, 62, 0.22) !important;
+  transition: background 0.25s ease, padding 0.25s ease !important;
+}
+
+.skill-item:hover {
+  background: rgba(46, 0, 62, 0.07) !important;
+}
+
+.skill-item h3 {
+  color: #2E003E !important;
+}
+
+/* Education card */
+.education-card {
+  background: #2E003E !important;
+  color: #FFFFFF !important;
+  border: 1px solid #2E003E !important;
+  border-radius: 12px;
+}
+
+.education-card h2,
+.education-card p,
+.education-card .education-year,
+.education-card .education-mark {
+  color: #FFFFFF !important;
+}
+
+.education-card .education-mark span,
+.education-year span {
+  color: #FFB7C5 !important;
+}
+
+/* Contact section */
+.contact-details {
+  border-color: rgba(46, 0, 62, 0.25) !important;
+}
+
+.contact-details a {
+  border-color: rgba(46, 0, 62, 0.25) !important;
+}
+
+.contact-details a > span,
+.contact-details strong,
+.contact-details b {
+  color: #2E003E !important;
+}
+
+/* Purple footer */
+.site-footer {
+  background: #2E003E !important;
+  color: #FFFFFF !important;
+  border-top: 1px solid rgba(255, 183, 197, 0.35) !important;
+}
+
+.site-footer .footer-name,
+.site-footer a {
+  color: #FFFFFF !important;
+}
+
+.site-footer a:hover {
+  color: #FFB7C5 !important;
+}
+
+/* Subtle animations */
+@keyframes pinkPurpleGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(46, 0, 62, 0);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(46, 0, 62, 0.22);
+  }
+}
+
+.hero-monogram {
+  animation: pinkPurpleGlow 4s ease-in-out infinite;
+}
+
+.why-card:hover,
+.experience-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Mobile layout */
+@media (max-width: 760px) {
+  .nav,
+  .nav.is-open {
+    background: #2E003E !important;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #why-choose-me .why-grid > .why-card-cost {
+    grid-column: 1 !important;
+  }
+
+  .hero {
+    background: #FFB7C5 !important;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
