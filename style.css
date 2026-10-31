@@ -531,3 +531,12 @@ body,
 #skills .skills-list {
   margin-bottom: 0 !important;
 }
+/* Remove the extra line above Education */
+#education {
+  border-top: none !important;
+}
+
+#education::before {
+  display: none !important;
+  content: none !important;
+}
